@@ -45,3 +45,39 @@ var listIDStyle = document.querySelector("#highlight"); // Return first element 
 
 var allTagsStyle = document.querySelectorAll(".bolded"); // Return a HTML Collection with CSS Style selector
 
+/*
+  Manipulation
+
+  changing and elements style
+  adding / removing classes
+  changing the content of a tag
+  changing attributes(src, href etc)
+*/
+
+// Bad idea change css better by adding / removing classes
+list1.style.color = "#2ecc71";
+list1.style.textDecoration = "line-through";
+
+// Higthligth h1 by adding the .highlight class
+var h1 = document.querySelector("h1");
+h1.classList.add("highlight");
+
+// Remove a Class
+allTagsStyle[1].classList.remove("bolded");
+
+// Fancy
+var pTag = document.querySelector("p");
+
+
+// Manipulate a property
+setInterval(function () {
+
+  if (pTag.classList.value === "unfancy") {
+    pTag.classList.remove("unfancy");
+    pTag.classList.add("fancy");
+  } else {
+    pTag.classList.remove("fancy");
+    pTag.classList.add("unfancy");
+  }
+
+}, 1000);
